@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "restaurant",
+          "value": "restau"
+        },
+        {
+          "label": "pique-nique",
+          "value": "piquenique"
+        }
+      ],
+      "label": "Select",
+      "type": "select",
+      "id": "Field_1ps0vh5",
+      "key": "lieuRepas"
+    }
+  ],
+  "type": "default",
+  "id": "Form_selectLieuRepas",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.7.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 6
+}

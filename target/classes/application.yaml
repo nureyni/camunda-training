@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    password: changeme
+    url: jdbc:mysql://localhost:3306/camunda
+    username: root
+
+camunda:
+  bpm:
+    database:
+      schema-update: drop-create
+    admin-user:
+      id: admin
+      password: admin

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="meteo_des" name="Meteo Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="meteo" name="Decision 1">
+    <decisionTable id="DecisionTable_1eim2k6" hitPolicy="FIRST">
+      <input id="Input_1" label="Temperature" camunda:inputVariable="temperature">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jb42ar" label="Humidité" camunda:inputVariable="humidity">
+        <inputExpression id="LiteralExpression_1va80pz" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Meteo" name="temps" typeRef="string" />
+      <rule id="DecisionRule_1ntlznu">
+        <inputEntry id="UnaryTests_03n1y0v">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mlzqui">
+          <text>&gt; 0.5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o0jwav">
+          <text>"pleu"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gts98t">
+        <inputEntry id="UnaryTests_1wlmqr5">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vc2cnh">
+          <text>&lt;= 0.5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n01ltu">
+          <text>"beau"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09jp1v0">
+        <inputEntry id="UnaryTests_11tebcz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c3rreg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rw1176">
+          <text>"frois"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="meteo">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
